@@ -1,7 +1,10 @@
 
-<div *ngFor="let d of def">
-  <span><h3 color-word>{{ d.word }}</h3></span>
-  <img src="{{ d.picture }}"/>
-  <span>{{ d.nature_word }}</span>
-  <span>{{ d.definition }}</span>
+
+<h2>{{ def[0].word[0] }}</h2>
+    
+<div *ngFor="let e of def">
+   <div [colorword]="motSaisi">Mot : {{ e.word }}</div>
+   <div>Définition : {{ e.nature_word}}</div>
+  <img src="{{e.picture}}"/>
 </div>
+

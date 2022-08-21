@@ -8,10 +8,16 @@ import { DefsByLetterComponent } from './defs-by-letter/defs-by-letter.component
 import { HttpClientModule } from '@angular/common/http';
 import { DefinitionsService } from './shared/services/definitions.service';
 import { SearchDefinitionComponent } from './search-definition/search-definition.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [AppComponent, AddDefinitionComponent, DefsByLetterComponent, SearchDefinitionComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    AddDefinitionComponent,
+    DefsByLetterComponent,
+    SearchDefinitionComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, SharedModule],
   providers: [DefinitionsService],
   bootstrap: [AppComponent],
 })
