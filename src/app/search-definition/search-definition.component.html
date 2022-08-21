@@ -1,4 +1,7 @@
 <div>
   <h2>Recherche un mot</h2>
-  <input/>
+  <input type="text" [(ngModel)]="userCapture"/>
+
 </div>
+
+<app-defs-by-letter [userCapture]="userCapture"></app-defs-by-letter>

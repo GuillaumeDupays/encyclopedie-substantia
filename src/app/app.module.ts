@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DefinitionsService } from './shared/services/definitions.service';
 import { SearchDefinitionComponent } from './search-definition/search-definition.component';
 import { SharedModule } from './shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,13 @@ import { SharedModule } from './shared/shared.module';
     DefsByLetterComponent,
     SearchDefinitionComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, SharedModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    SharedModule,
+    FormsModule,
+  ],
   providers: [DefinitionsService],
   bootstrap: [AppComponent],
 })

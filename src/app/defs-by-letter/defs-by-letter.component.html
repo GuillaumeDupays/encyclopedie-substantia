@@ -1,10 +1,21 @@
 
+<div>{{ userCapture }}</div>
 
-<h2>{{ def[0].word[0] }}</h2>
+<div *ngIf="objDef.length > 1">
+  <h2>{{ objDef[0]!.word[0] }}</h2>
+  <div *ngFor="let el of objDef">
+    <h2>WORD : {{ el.word }}</h2>
+    <span>{{ el.nature_word}}</span>
+    <span>{{ el.definition}}</span>
+    <span>{{ el.picture}}</span>
+
+  </div>
+
+</div>
     
-<div *ngFor="let e of def">
-   <div [colorword]="motSaisi">Mot : {{ e.word }}</div>
-   <div>Définition : {{ e.nature_word}}</div>
+<div *ngFor="let e of def" class="container-list">
   <img src="{{e.picture}}"/>
+  <h3 [colorword]="motSaisi">{{ e.word }}</h3>
+   <div>Définition : {{ e.nature_word}}</div>
 </div>
 
